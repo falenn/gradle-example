@@ -15,6 +15,16 @@
  *
  * Read on dependency graphs
  *http://www.gradle.org/docs/current/userguide/java_plugin.html
+ *
+ * Running "gradle assemble" results in a build and packaging such that
+ * a jar should be in build/libs, a.k.a gradle-example-2-1.0-SNAPSHOT.jar
+ *
+ * modify the version to change the output
+ *
+ * archivesBaseName = "quote" can be used to name the lib "quote"
+ *
+ * Gradle java plugin details
+ * http://www.gradle.org/docs/current/userguide/java_plugin.html
  */
 
 plugins {
@@ -26,11 +36,32 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
+/**
+ * A repo in gradle is a location where gradle can locate Jar files we
+ * use as dependencies.
+ *
+ * Need a dependency?  Search here: http://search.maven.org/ to get the GAV
+ *
+ */
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    compile group: 'com.google.code.findbugs', name: 'annotations', version: '3.0.1'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    compile 'com.google.code.findbugs:annotations:3.0.1'
 }
+
+/**
+ * dependency configurations are the following:
+ * - compile
+ * - runtime
+ * - testCompile
+ * - testRuntime
+ *
+ * Also, notice the two formats for dependency listing; there's a variable
+ *  version and condensed.
+ *
+ * Notice the "+" on the version number for junit.  This will allow updates within
+ * the major release version, a.k.a 4.+
+ */

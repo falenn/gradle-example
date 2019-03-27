@@ -1,0 +1,42 @@
+/**
+ * This is a demonstration of a multi-module project
+ * in gradle.
+ *
+ * Read more here: http://www.gradle.org/docs/current/userguide/multi_project_builds.html
+ */
+allprojects {
+  task hello << { task -> println "I'm $task.project.name" }
+}
+
+/**
+ * Apply these common features to all subprojects
+ */
+subprojects {
+  apply plugin: "java"
+  version '1.0-SNAPSHOT'
+  sourceCompatibility = 1.8
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    testCompile "junit:junit:4+"
+    compile 'org.apache.logging.log4j:log4j-core:2.6.2'
+  }
+
+}
+
+/**
+ * Demonstrate project dependencies
+ */
+
+project(':gradle-example-2') {
+  dependencies {
+    compile project(':gradle-example-1')
+  }
+}
+
+project(':gradle-example-3') {
+  dependencies {
+    compile project(':gradle-example-2'). project(':gradle-example-1')
+  }
+}

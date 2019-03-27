@@ -1,2 +1,3 @@
 rootProject.name = 'gradle-example'
+include ":gradle-example-1", ":gradle-example-2", ":gradle-example-3"
 

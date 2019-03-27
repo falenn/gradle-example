@@ -11,6 +11,10 @@
 
 defaultTasks 'buildTask'
 
+group 'org.talents.examples.gradle'
+version '1.0-SNAPSHOT'
+
+
 task compileTask << {
   System.out.println "Compiling..."
 }
