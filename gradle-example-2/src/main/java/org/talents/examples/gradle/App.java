@@ -13,7 +13,7 @@ public class App {
     logger.log(Level.INFO, "Begin main");
 
     App app = new App();
-    app.testNullable("test with no nullable");
+    app.testNullable("test with no nullable",null);
 
     app.testNullable("test with nullable", "nullable string");
 

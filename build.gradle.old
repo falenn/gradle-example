@@ -1,4 +1,4 @@
-import com.sun.org.apache.xalan.internal.xsltc.cmdline.Compile
+
 
 plugins {
     id 'java'
@@ -7,8 +7,8 @@ plugins {
 group 'org.talents.example.gradle'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+sourceCompatibility = '1.7'
+targetCompatibility = '1.7'
 
 repositories {
   mavenCentral()

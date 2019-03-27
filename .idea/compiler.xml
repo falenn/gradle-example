@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="gradle-example_main" target="1.7" />
+      <module name="gradle-example_test" target="1.7" />
+      <module name="org.talent.s.examples.gradle.gradle-example-3.main" target="1.8" />
+      <module name="org.talent.s.examples.gradle.gradle-example-3.test" target="1.8" />
+      <module name="org.talents.example.gradle.gradle-example-1.main" target="1.8" />
+      <module name="org.talents.example.gradle.gradle-example-1.test" target="1.8" />
+      <module name="org.talents.example.gradle.gradle-example-2.main" target="1.8" />
+      <module name="org.talents.example.gradle.gradle-example-2.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

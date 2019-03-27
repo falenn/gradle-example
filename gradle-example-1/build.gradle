@@ -1,0 +1,21 @@
+/**
+ * Thanks to: https://rominirani.com/gradle-tutorial-part-1-installation-setup-2ea77729fc8c
+ *
+ * Basic build.gradle file.
+ *
+ * Gradle, (which uses Groovy) grants the developer a more terse build env with more control
+ * over the build execution.  Here, we demonstrate closure functions as the governing mechanism
+ * for the build.
+ */
+
+
+defaultTasks 'buildTask'
+
+task compileTask << {
+  System.out.println "Compiling..."
+}
+
+task buildTask(dependsOn:compileTask) << {
+  System.out.println "building..."
+}
+
